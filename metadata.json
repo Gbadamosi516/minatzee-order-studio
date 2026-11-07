@@ -1,0 +1,6 @@
+{
+  "name": "Minatzee Order Studio",
+  "description": "Premium live order management Kanban board for Minatzee Enterprise - Women's & Children's innerwear boutique in Abuja, Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

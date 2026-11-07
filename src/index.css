@@ -1,0 +1,289 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* =========================================================================
+       MINATZEE ENTERPRISE — DESIGN TOKENS v1.2
+       Official brand colours, typography, elevation and status system.
+       Source: https://site-665156b31cc74d49b11e7808f80a9548.freebuff.page/#colour
+       ========================================================================= */
+
+    /* ------------------------------------------------- OFFICIAL BRAND COLOURS */
+    --brand-burgundy: #9A3442;  /* --wine-600: brand core */
+    --brand-blush: #FFB7B1;     /* --blush-400: brand blush */
+    --brand-white: #FFFFFF;
+
+    /* ---------------------------------------------------- SUPPORTING PALETTE */
+    --burgundy-deep: #6B1E2B;     /* dark brand field, hover, error, premium */
+    --burgundy-muted: #C87A86;    /* quiet brand: illustration, 2nd series */
+    --rose-soft: #F3C6CB;         /* mid-tone supporting surface */
+    --rose-pale: #FBE9EB;         /* gentlest tinted surface */
+    --neutral-cream: #FAF6F2;     /* paper: documents, print stock */
+    --neutral-charcoal: #2E2425;  /* body text and icons — warm, not black */
+    --neutral-warm-grey: #E9DDD9; /* dividers, rows, input wells */
+
+    /* ------------------------------------------------ WINE RAMP (Brand Voice) */
+    --wine-950: #3D0F17;
+    --wine-900: #521722;
+    --wine-800: #6B1F2C;
+    --wine-700: #822936;
+    --wine-600: #9A3442; /* brand core */
+    --wine-500: #B04756;
+    --wine-400: #C66070;
+    --wine-300: #D98A96;
+
+    /* ------------------------------------------------ BLUSH RAMP (Soft Voice) */
+    --blush-600: #E07F79;
+    --blush-500: #F79E97;
+    --blush-400: #FFB7B1; /* brand blush */
+    --blush-300: #FFC9C2;
+    --blush-200: #FBDDD8;
+    --blush-100: #FDF1EF;
+
+    /* ------------------------------------------------ CREAM RAMP (Paper Stock) */
+    --cream-50: #FDFAF5;  /* canvas */
+    --cream-100: #F8F2E8;
+    --cream-200: #F0E6D8;
+    --cream-300: #E2D5C2;
+    --cream-400: #CFBFA9;
+
+    /* ------------------------------------------------ INK RAMP (Reading Text) */
+    --ink-900: #2A1B1E;
+    --ink-800: #3A2A2D;
+    --ink-700: #4A3639;
+    --ink-600: #5C4649;
+    --ink-500: #6B5A5D;
+
+    /* --------------------------------------------- GILT RAMP (Premium Marker) */
+    --gilt-600: #A2703F;
+    --gilt-500: #C08A5E;
+    --gilt-200: #EBD3BA;
+
+    /* ------------------------------------------------------ SEMANTIC SURFACES */
+    --surface-canvas: var(--cream-50);
+    --surface-raised: #FFFFFF;
+    --surface-soft: var(--cream-100);
+    --surface-sunken: var(--cream-200);
+    --surface-neutral: var(--neutral-cream);
+    --surface-rose: var(--rose-pale);
+    --surface-rose-strong: var(--rose-soft);
+    --surface-deep: var(--burgundy-deep);
+    --surface-brand: var(--wine-600);
+    --surface-accent: var(--blush-400);
+
+    /* ---------------------------------------------------------- SEMANTIC TEXT */
+    --text-primary: var(--ink-900);
+    --text-body: var(--neutral-charcoal);
+    --text-secondary: var(--ink-700);
+    --text-muted: var(--ink-500);
+    --text-accent: var(--wine-600);
+    --text-price: var(--wine-700);
+    --text-on-brand: #FFFFFF;
+
+    /* ------------------------------------------------------- BORDERS & DIVIDERS */
+    --border-strong: var(--wine-600);
+    --border-warm: var(--neutral-warm-grey);
+    --border-subtle: var(--cream-300);
+    --border-soft: var(--cream-200);
+
+    /* ---------------------------------------------- STATUS COLOURS (UI USE ONLY) */
+    /* Tested WCAG AA (>= 4.5:1) - Always paired with icon + word */
+    --status-success-fg: #2F6B4F;
+    --status-success-bg: #EAF1EC;
+    --status-success-border: #2F6B4F;
+
+    --status-pending-fg: #8A5A1E;
+    --status-pending-bg: #F7EEDD;
+    --status-pending-border: #8A5A1E;
+
+    --status-warning-fg: #9C4A22;
+    --status-warning-bg: #F8E8DE;
+    --status-warning-border: #9C4A22;
+
+    --status-error-fg: var(--burgundy-deep);
+    --status-error-bg: var(--rose-pale);
+    --status-error-border: var(--burgundy-deep);
+
+    --status-info-fg: #3B5A70;
+    --status-info-bg: #E9EFF3;
+    --status-info-border: #3B5A70;
+
+    /* -------------------------------------------------------------- ELEVATION */
+    /* Minatzee hard offset shadows in wine (#9A3442) */
+    --shadow-hard-xs: 2px 2px 0 var(--wine-600);
+    --shadow-hard-sm: 3px 3px 0 var(--wine-600);
+    --shadow-hard: 6px 6px 0 var(--wine-600);
+    --shadow-hard-lg: 8px 8px 0 var(--wine-600);
+    --shadow-none: none;
+
+    /* ----------------------------------------------------------------- RADIUS */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-pill: 999px;
+
+    /* ------------------------------------------------------------- TYPOGRAPHY */
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--cream-50);
+    color: var(--neutral-charcoal);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    margin: 0;
+  }
+
+  /* 3-Family Typography Classes */
+  .font-fraunces, .font-display {
+    font-family: 'Fraunces', "Iowan Old Style", Georgia, serif;
+    font-optical-sizing: auto;
+  }
+
+  .font-instrumentsans, .font-text {
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-spacemono, .font-mono {
+    font-family: 'Space Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  /* Backwards compatibility aliases */
+  .font-manrope {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+  .font-dmsans {
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+  }
+  .font-cormorant {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+}
+
+/* =========================================================================
+   MINATZEE UTILITY & COMPONENT CLASSES (v1.2)
+   ========================================================================= */
+
+/* Hard Wine Shadows */
+.shadow-hard-xs {
+  box-shadow: 2px 2px 0 #9A3442;
+}
+
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0 #9A3442;
+}
+
+.shadow-hard {
+  box-shadow: 6px 6px 0 #9A3442;
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0 #9A3442;
+}
+
+/* Status Chips (Design System v1.2 specifications) */
+.mz-status-success {
+  background-color: #EAF1EC;
+  color: #2F6B4F;
+  border: 1.5px solid #2F6B4F;
+}
+
+.mz-status-pending {
+  background-color: #F7EEDD;
+  color: #8A5A1E;
+  border: 1.5px solid #8A5A1E;
+}
+
+.mz-status-warning {
+  background-color: #F8E8DE;
+  color: #9C4A22;
+  border: 1.5px solid #9C4A22;
+}
+
+.mz-status-error {
+  background-color: #FBE9EB;
+  color: #6B1E2B;
+  border: 1.5px solid #6B1E2B;
+}
+
+.mz-status-info {
+  background-color: #E9EFF3;
+  color: #3B5A70;
+  border: 1.5px solid #3B5A70;
+}
+
+/* Buttons */
+.mz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 2px solid #9A3442;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #9A3442;
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #9A3442;
+  transition: all 140ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.mz-btn:hover {
+  background-color: #FFC9C2;
+  transform: translate(-1px, -1px);
+}
+
+.mz-btn:active {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+.mz-btn--solid {
+  background-color: #9A3442;
+  color: #FFFFFF;
+}
+
+.mz-btn--solid:hover {
+  background-color: #822936;
+  color: #FFFFFF;
+}
+
+.mz-btn--accent {
+  background-color: #FFB7B1;
+  color: #521722;
+}
+
+.mz-btn--accent:hover {
+  background-color: #FFC9C2;
+  color: #521722;
+}
+
+/* Custom Scrollbars */
+.kanban-scroll::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.kanban-scroll::-webkit-scrollbar-track {
+  background: #F8F2E8;
+  border-radius: 9999px;
+}
+.kanban-scroll::-webkit-scrollbar-thumb {
+  background: #9A3442;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+.kanban-scroll::-webkit-scrollbar-thumb:hover {
+  background: #822936;
+}
+
+/* Drag overlay card */
+.drag-overlay-card {
+  box-shadow: 8px 8px 0 #9A3442;
+  transform: rotate(1deg) scale(1.02);
+}
