@@ -49,11 +49,14 @@ import {
   triggerCelebration 
 } from './utils/confetti';
 import { User } from 'firebase/auth';
+import { GoogleSheetsModal } from './components/GoogleSheetsModal';
 import { 
   initAuth, 
   googleSignIn, 
   logoutGoogle, 
-  getAccessToken 
+  getAccessToken,
+  parseAuthError,
+  AuthErrorInfo
 } from './services/googleAuth';
 import { 
   syncOrdersToSpreadsheet, 
@@ -69,6 +72,8 @@ export default function App() {
   // Google Sheets Integration State
   const [googleUser, setGoogleUser] = useState<User | null>(null);
   const [isSyncingSheets, setIsSyncingSheets] = useState(false);
+  const [isSheetsModalOpen, setIsSheetsModalOpen] = useState(false);
+  const [authErrorInfo, setAuthErrorInfo] = useState<AuthErrorInfo | null>(null);
   const [spreadsheetUrl, setSpreadsheetUrl] = useState<string | null>(
     () => getCachedSheetInfo().spreadsheetUrl
   );
@@ -141,6 +146,7 @@ export default function App() {
   // Google Sign-in & Sheets sync handlers
   const handleGoogleSignIn = async () => {
     try {
+      setAuthErrorInfo(null);
       const res = await googleSignIn();
       if (res) {
         setGoogleUser(res.user);
@@ -148,7 +154,10 @@ export default function App() {
       }
     } catch (err: any) {
       console.error('Google Sign In failed:', err);
-      showToast(err.message || 'Could not sign in with Google');
+      const parsed = parseAuthError(err);
+      setAuthErrorInfo(parsed);
+      setIsSheetsModalOpen(true);
+      showToast(parsed.title);
     }
   };
 
@@ -175,28 +184,17 @@ export default function App() {
       showToast(`Synced ${res.count} orders to Google Sheets!`);
     } catch (err: any) {
       console.error('Sheets sync error:', err);
-      showToast(err.message || 'Failed to sync with Google Sheets');
+      const parsed = parseAuthError(err);
+      setAuthErrorInfo(parsed);
+      setIsSheetsModalOpen(true);
+      showToast(parsed.title);
     } finally {
       setIsSyncingSheets(false);
     }
   };
 
   const handleTriggerSheetsSync = () => {
-    if (!googleUser) {
-      handleGoogleSignIn();
-      return;
-    }
-    setConfirmationConfig({
-      isOpen: true,
-      title: 'Sync Orders to Google Sheets?',
-      message: `This will update your private 'Minatzee Order Studio - Boutique Orders' spreadsheet with all current ${orders.length} order(s).`,
-      confirmLabel: 'Sync to Sheets',
-      isDestructive: false,
-      onConfirm: () => {
-        setConfirmationConfig((c) => ({ ...c, isOpen: false }));
-        handleExecuteSheetsSync();
-      },
-    });
+    setIsSheetsModalOpen(true);
   };
 
   // Order Handlers
@@ -488,6 +486,22 @@ export default function App() {
         isSyncingSheets={isSyncingSheets}
         spreadsheetUrl={spreadsheetUrl}
         lastSyncedAt={lastSyncedAt}
+      />
+
+      {/* Google Sheets & Spreadsheet Center Modal */}
+      <GoogleSheetsModal
+        isOpen={isSheetsModalOpen}
+        onClose={() => setIsSheetsModalOpen(false)}
+        orders={orders}
+        googleUser={googleUser}
+        onGoogleSignIn={handleGoogleSignIn}
+        onGoogleSignOut={handleGoogleSignOut}
+        onSyncSheets={handleExecuteSheetsSync}
+        isSyncingSheets={isSyncingSheets}
+        spreadsheetUrl={spreadsheetUrl}
+        lastSyncedAt={lastSyncedAt}
+        authError={authErrorInfo}
+        onClearAuthError={() => setAuthErrorInfo(null)}
       />
 
       {/* Confirmation Dialog */}

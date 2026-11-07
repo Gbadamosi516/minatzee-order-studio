@@ -16,6 +16,8 @@ import { User } from 'firebase/auth';
 import { BusinessSettings, Order } from '../types/order';
 import { exportOrdersBackup, validateImportData } from '../utils/storage';
 import { getInitialSeedOrders } from '../utils/helpers';
+import { exportOrdersToCSV } from '../utils/spreadsheetExport';
+import { FileSpreadsheet } from 'lucide-react';
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -434,6 +436,26 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   className="w-full py-2 px-3 rounded-full bg-white hover:bg-[#F3C6CB] text-[#9A3442] border-2 border-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider text-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
                 >
                   Choose Backup File
+                </button>
+              </div>
+
+              {/* Instant CSV Spreadsheet Download */}
+              <div className="col-span-1 sm:col-span-2 p-3.5 rounded-[10px] bg-[#EAF1EC] border-2 border-[#2F6B4F] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-[2px_2px_0_#2F6B4F]">
+                <div>
+                  <h4 className="font-spacemono font-bold text-xs text-[#2F6B4F] mb-0.5 flex items-center gap-1.5 uppercase tracking-wider">
+                    <FileSpreadsheet className="w-4 h-4 text-[#2F6B4F]" />
+                    <span>Download Spreadsheet (.csv)</span>
+                  </h4>
+                  <p className="text-xs text-[#20503A] font-instrumentsans">
+                    Opens directly in Google Sheets, Microsoft Excel, and Apple Numbers without requiring login.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => exportOrdersToCSV(orders)}
+                  className="w-full sm:w-auto shrink-0 py-2 px-4 rounded-full bg-[#2F6B4F] hover:bg-[#20503A] text-white font-instrumentsans font-semibold text-xs border-2 border-[#2F6B4F] text-center transition-all cursor-pointer shadow-[2px_2px_0_#20503A] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                >
+                  Download CSV
                 </button>
               </div>
             </div>
