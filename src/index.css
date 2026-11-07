@@ -3,133 +3,103 @@
 @layer base {
   :root {
     /* =========================================================================
-       MINATZEE ENTERPRISE — DESIGN TOKENS v1.2
-       Official brand colours, typography, elevation and status system.
-       Source: https://site-665156b31cc74d49b11e7808f80a9548.freebuff.page/#colour
+       RADIX UI COLOR SYSTEM
+       Primary Brand Color as the Core Accent (Steps 1–12)
+       Complementary Warm Neutral Gray Scale (Steps 1–12)
+       Radix 12-Step Functional Anatomy:
+       - Steps 1–2: App backgrounds & subtle card surfaces
+       - Steps 3–5: Interactive UI elements (default, hover, active)
+       - Steps 6–8: Borders and focus rings (subtle, element, hover)
+       - Steps 9–10: Solid brand backgrounds & solid hover states
+       - Steps 11–12: Accessible text contrast (low-contrast & high-contrast)
        ========================================================================= */
 
-    /* ------------------------------------------------- OFFICIAL BRAND COLOURS */
-    --brand-burgundy: #9A3442;  /* --wine-600: brand core */
-    --brand-blush: #FFB7B1;     /* --blush-400: brand blush */
-    --brand-white: #FFFFFF;
+    /* --------------------------------------------------- ACCENT SCALE (1–12) */
+    /* Primary: Burgundy (#9A3442) as Accent 9 */
+    --accent-1: #FFF8F7;   /* App background tint */
+    --accent-2: #FDF1EF;   /* Subtle component background (Blush 100) */
+    --accent-3: #FBDDD8;   /* UI element background (Blush 200) */
+    --accent-4: #FFC9C2;   /* Hovered UI element (Blush 300) */
+    --accent-5: #FFB7B1;   /* Active UI element / Brand Blush (Blush 400) */
+    --accent-6: #F79E97;   /* Selected element border (Blush 500) */
+    --accent-7: #D98A96;   /* Subtle UI border (Wine 300) */
+    --accent-8: #C66070;   /* Interactive border hover (Wine 400) */
+    --accent-9: #9A3442;   /* ⭐ SOLID ACCENT (Brand Burgundy Core) */
+    --accent-10: #822936;  /* Solid accent hover (Wine 700) */
+    --accent-11: #6B1F2C;  /* Low-contrast accent text (Wine 800) */
+    --accent-12: #3D0F17;  /* High-contrast accent text (Wine 950) */
 
-    /* ---------------------------------------------------- SUPPORTING PALETTE */
-    --burgundy-deep: #6B1E2B;     /* dark brand field, hover, error, premium */
-    --burgundy-muted: #C87A86;    /* quiet brand: illustration, 2nd series */
-    --rose-soft: #F3C6CB;         /* mid-tone supporting surface */
-    --rose-pale: #FBE9EB;         /* gentlest tinted surface */
-    --neutral-cream: #FAF6F2;     /* paper: documents, print stock */
-    --neutral-charcoal: #2E2425;  /* body text and icons — warm, not black */
-    --neutral-warm-grey: #E9DDD9; /* dividers, rows, input wells */
+    /* Radix Contrast Tokens */
+    --accent-contrast: #FFFFFF;
+    --accent-surface: var(--accent-2);
+    --accent-indicator: var(--accent-9);
+    --accent-track: var(--accent-9);
 
-    /* ------------------------------------------------ WINE RAMP (Brand Voice) */
-    --wine-950: #3D0F17;
-    --wine-900: #521722;
-    --wine-800: #6B1F2C;
-    --wine-700: #822936;
-    --wine-600: #9A3442; /* brand core */
-    --wine-500: #B04756;
-    --wine-400: #C66070;
-    --wine-300: #D98A96;
+    /* ------------------------------------------- GRAY / SAND SCALE (1–12) */
+    /* Warm paper sand neutrals paired with Burgundy */
+    --gray-1: #FDFAF5;   /* Canvas paper background (Cream 50) */
+    --gray-2: #F8F2E8;   /* Raised subtle background (Cream 100) */
+    --gray-3: #FAF6F2;   /* Card & document background (Neutral Cream) */
+    --gray-4: #F0E6D8;   /* Well / sunken background (Cream 200) */
+    --gray-5: #E9DDD9;   /* Subtle dividers (Warm Grey) */
+    --gray-6: #E2D5C2;   /* Subtle borders (Cream 300) */
+    --gray-7: #CFBFA9;   /* UI element borders (Cream 400) */
+    --gray-8: #B5A48D;   /* Hovered element borders */
+    --gray-9: #6B5A5D;   /* Solid muted gray */
+    --gray-10: #5C4649;  /* Muted text labels */
+    --gray-11: #3A2A2D;  /* Low-contrast secondary text */
+    --gray-12: #2E2425;  /* High-contrast primary text (Charcoal / Ink) */
 
-    /* ------------------------------------------------ BLUSH RAMP (Soft Voice) */
-    --blush-600: #E07F79;
-    --blush-500: #F79E97;
-    --blush-400: #FFB7B1; /* brand blush */
-    --blush-300: #FFC9C2;
-    --blush-200: #FBDDD8;
-    --blush-100: #FDF1EF;
+    /* ------------------------------------- RADIX STATUS SCALES (WCAG AA >= 4.5:1) */
+    /* Grass / Success (Paid / Delivered) */
+    --grass-1: #FBFCFA;
+    --grass-2: #F3F9F4;
+    --grass-3: #EAF1EC;  /* Success surface */
+    --grass-6: #C5DEC8;
+    --grass-7: #8FB796;
+    --grass-9: #2F6B4F;  /* Success solid / border */
+    --grass-11: #20503A; /* Success text */
 
-    /* ------------------------------------------------ CREAM RAMP (Paper Stock) */
-    --cream-50: #FDFAF5;  /* canvas */
-    --cream-100: #F8F2E8;
-    --cream-200: #F0E6D8;
-    --cream-300: #E2D5C2;
-    --cream-400: #CFBFA9;
+    /* Amber / Warning (Part Paid) */
+    --amber-1: #FEFDFB;
+    --amber-2: #FAF4EB;
+    --amber-3: #F8E8DE;  /* Warning surface */
+    --amber-6: #ECCBB9;
+    --amber-7: #D89873;
+    --amber-9: #9C4A22;  /* Warning solid / border */
+    --amber-11: #6E3212; /* Warning text */
 
-    /* ------------------------------------------------ INK RAMP (Reading Text) */
-    --ink-900: #2A1B1E;
-    --ink-800: #3A2A2D;
-    --ink-700: #4A3639;
-    --ink-600: #5C4649;
-    --ink-500: #6B5A5D;
+    /* Gold / Pending (Awaiting Payment) */
+    --gold-1: #FDFDFC;
+    --gold-2: #FAF7F0;
+    --gold-3: #F7EEDD;  /* Pending surface */
+    --gold-6: #E4D7BB;
+    --gold-7: #C9B27F;
+    --gold-9: #8A5A1E;  /* Pending solid / border */
+    --gold-11: #5D3D14; /* Pending text */
 
-    /* --------------------------------------------- GILT RAMP (Premium Marker) */
-    --gilt-600: #A2703F;
-    --gilt-500: #C08A5E;
-    --gilt-200: #EBD3BA;
+    /* Ruby / Error (Failed / Alert) */
+    --ruby-1: #FFF8F8;
+    --ruby-2: #FDF1F2;
+    --ruby-3: #FBE9EB;  /* Error surface */
+    --ruby-6: #F3C6CB;
+    --ruby-7: #D98A96;
+    --ruby-9: #6B1E2B;  /* Error solid / border */
+    --ruby-11: #4A141D; /* Error text */
 
-    /* ------------------------------------------------------ SEMANTIC SURFACES */
-    --surface-canvas: var(--cream-50);
-    --surface-raised: #FFFFFF;
-    --surface-soft: var(--cream-100);
-    --surface-sunken: var(--cream-200);
-    --surface-neutral: var(--neutral-cream);
-    --surface-rose: var(--rose-pale);
-    --surface-rose-strong: var(--rose-soft);
-    --surface-deep: var(--burgundy-deep);
-    --surface-brand: var(--wine-600);
-    --surface-accent: var(--blush-400);
-
-    /* ---------------------------------------------------------- SEMANTIC TEXT */
-    --text-primary: var(--ink-900);
-    --text-body: var(--neutral-charcoal);
-    --text-secondary: var(--ink-700);
-    --text-muted: var(--ink-500);
-    --text-accent: var(--wine-600);
-    --text-price: var(--wine-700);
-    --text-on-brand: #FFFFFF;
-
-    /* ------------------------------------------------------- BORDERS & DIVIDERS */
-    --border-strong: var(--wine-600);
-    --border-warm: var(--neutral-warm-grey);
-    --border-subtle: var(--cream-300);
-    --border-soft: var(--cream-200);
-
-    /* ---------------------------------------------- STATUS COLOURS (UI USE ONLY) */
-    /* Tested WCAG AA (>= 4.5:1) - Always paired with icon + word */
-    --status-success-fg: #2F6B4F;
-    --status-success-bg: #EAF1EC;
-    --status-success-border: #2F6B4F;
-
-    --status-pending-fg: #8A5A1E;
-    --status-pending-bg: #F7EEDD;
-    --status-pending-border: #8A5A1E;
-
-    --status-warning-fg: #9C4A22;
-    --status-warning-bg: #F8E8DE;
-    --status-warning-border: #9C4A22;
-
-    --status-error-fg: var(--burgundy-deep);
-    --status-error-bg: var(--rose-pale);
-    --status-error-border: var(--burgundy-deep);
-
-    --status-info-fg: #3B5A70;
-    --status-info-bg: #E9EFF3;
-    --status-info-border: #3B5A70;
-
-    /* -------------------------------------------------------------- ELEVATION */
-    /* Minatzee hard offset shadows in wine (#9A3442) */
-    --shadow-hard-xs: 2px 2px 0 var(--wine-600);
-    --shadow-hard-sm: 3px 3px 0 var(--wine-600);
-    --shadow-hard: 6px 6px 0 var(--wine-600);
-    --shadow-hard-lg: 8px 8px 0 var(--wine-600);
-    --shadow-none: none;
-
-    /* ----------------------------------------------------------------- RADIUS */
-    --radius-xs: 4px;
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 22px;
-    --radius-pill: 999px;
+    /* ------------------------------------------------- RADIX ELEVATION & SHADOWS */
+    --shadow-hard-xs: 2px 2px 0 var(--accent-9);
+    --shadow-hard-sm: 3px 3px 0 var(--accent-9);
+    --shadow-hard: 6px 6px 0 var(--accent-9);
+    --shadow-hard-lg: 8px 8px 0 var(--accent-9);
 
     /* ------------------------------------------------------------- TYPOGRAPHY */
     font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
   }
 
   body {
-    background-color: var(--cream-50);
-    color: var(--neutral-charcoal);
+    background-color: var(--gray-1);
+    color: var(--gray-12);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
@@ -163,105 +133,100 @@
 }
 
 /* =========================================================================
-   MINATZEE UTILITY & COMPONENT CLASSES (v1.2)
+   RADIX UI COMPONENT & UTILITY CLASSES
    ========================================================================= */
 
-/* Hard Wine Shadows */
+/* Hard Accent Shadows (using Radix Accent 9) */
 .shadow-hard-xs {
-  box-shadow: 2px 2px 0 #9A3442;
+  box-shadow: 2px 2px 0 var(--accent-9);
 }
 
 .shadow-hard-sm {
-  box-shadow: 3px 3px 0 #9A3442;
+  box-shadow: 3px 3px 0 var(--accent-9);
 }
 
 .shadow-hard {
-  box-shadow: 6px 6px 0 #9A3442;
+  box-shadow: 6px 6px 0 var(--accent-9);
 }
 
 .shadow-hard-lg {
-  box-shadow: 8px 8px 0 #9A3442;
+  box-shadow: 8px 8px 0 var(--accent-9);
 }
 
-/* Status Chips (Design System v1.2 specifications) */
-.mz-status-success {
-  background-color: #EAF1EC;
-  color: #2F6B4F;
-  border: 1.5px solid #2F6B4F;
+/* Radix Status Chips */
+.radix-status-success {
+  background-color: var(--grass-3);
+  color: var(--grass-9);
+  border: 1.5px solid var(--grass-9);
 }
 
-.mz-status-pending {
-  background-color: #F7EEDD;
-  color: #8A5A1E;
-  border: 1.5px solid #8A5A1E;
+.radix-status-warning {
+  background-color: var(--amber-3);
+  color: var(--amber-9);
+  border: 1.5px solid var(--amber-9);
 }
 
-.mz-status-warning {
-  background-color: #F8E8DE;
-  color: #9C4A22;
-  border: 1.5px solid #9C4A22;
+.radix-status-pending {
+  background-color: var(--gold-3);
+  color: var(--gold-9);
+  border: 1.5px solid var(--gold-9);
 }
 
-.mz-status-error {
-  background-color: #FBE9EB;
-  color: #6B1E2B;
-  border: 1.5px solid #6B1E2B;
+.radix-status-error {
+  background-color: var(--ruby-3);
+  color: var(--ruby-9);
+  border: 1.5px solid var(--ruby-9);
 }
 
-.mz-status-info {
-  background-color: #E9EFF3;
-  color: #3B5A70;
-  border: 1.5px solid #3B5A70;
-}
-
-/* Buttons */
-.mz-btn {
+/* Radix Button Primitives */
+.radix-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   min-height: 44px;
   padding: 8px 18px;
-  border: 2px solid #9A3442;
+  border: 2px solid var(--accent-9);
   border-radius: 9999px;
   background-color: #FFFFFF;
-  color: #9A3442;
+  color: var(--accent-9);
   font-family: 'Instrument Sans', system-ui, sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   cursor: pointer;
-  box-shadow: 3px 3px 0 #9A3442;
+  box-shadow: 3px 3px 0 var(--accent-9);
   transition: all 140ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.mz-btn:hover {
-  background-color: #FFC9C2;
+.radix-btn:hover {
+  background-color: var(--accent-4);
   transform: translate(-1px, -1px);
 }
 
-.mz-btn:active {
+.radix-btn:active {
   box-shadow: none;
   transform: translate(0, 0);
 }
 
-.mz-btn--solid {
-  background-color: #9A3442;
-  color: #FFFFFF;
+.radix-btn-solid {
+  background-color: var(--accent-9);
+  color: var(--accent-contrast);
 }
 
-.mz-btn--solid:hover {
-  background-color: #822936;
-  color: #FFFFFF;
+.radix-btn-solid:hover {
+  background-color: var(--accent-10);
+  color: var(--accent-contrast);
 }
 
-.mz-btn--accent {
-  background-color: #FFB7B1;
-  color: #521722;
+.radix-btn-soft {
+  background-color: var(--accent-3);
+  color: var(--accent-12);
+  border-color: var(--accent-7);
 }
 
-.mz-btn--accent:hover {
-  background-color: #FFC9C2;
-  color: #521722;
+.radix-btn-soft:hover {
+  background-color: var(--accent-4);
+  color: var(--accent-12);
 }
 
 /* Custom Scrollbars */
@@ -270,20 +235,20 @@
   width: 6px;
 }
 .kanban-scroll::-webkit-scrollbar-track {
-  background: #F8F2E8;
+  background: var(--gray-2);
   border-radius: 9999px;
 }
 .kanban-scroll::-webkit-scrollbar-thumb {
-  background: #9A3442;
+  background: var(--accent-9);
   border-radius: 9999px;
   transition: background-color 0.2s ease;
 }
 .kanban-scroll::-webkit-scrollbar-thumb:hover {
-  background: #822936;
+  background: var(--accent-10);
 }
 
 /* Drag overlay card */
 .drag-overlay-card {
-  box-shadow: 8px 8px 0 #9A3442;
+  box-shadow: 8px 8px 0 var(--accent-9);
   transform: rotate(1deg) scale(1.02);
 }
