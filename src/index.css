@@ -35,6 +35,34 @@
     --accent-indicator: var(--accent-9);
     --accent-track: var(--accent-9);
 
+    /* Direct Minatzee Brand Aliases (Full v1.2 URL Alignment) */
+    --brand-burgundy: var(--accent-9);
+    --brand-blush: var(--accent-5);
+    --brand-white: #FFFFFF;
+    --wine-950: var(--accent-12);
+    --wine-900: #521722;
+    --wine-800: var(--accent-11);
+    --wine-700: var(--accent-10);
+    --wine-600: var(--accent-9);
+    --wine-500: #B04756;
+    --wine-400: var(--accent-8);
+    --wine-300: var(--accent-7);
+    --blush-400: var(--accent-5);
+    --blush-300: var(--accent-4);
+    --blush-200: var(--accent-3);
+    --blush-100: var(--accent-2);
+    --cream-50: var(--gray-1);
+    --cream-100: var(--gray-2);
+    --cream-200: var(--gray-4);
+    --cream-300: var(--gray-6);
+    --cream-400: var(--gray-7);
+    --neutral-cream: var(--gray-3);
+    --neutral-charcoal: var(--gray-12);
+    --neutral-warm-grey: var(--gray-5);
+    --rose-soft: #F3C6CB;
+    --rose-pale: #FBE9EB;
+    --burgundy-deep: var(--accent-11);
+
     /* ------------------------------------------- GRAY / SAND SCALE (1–12) */
     /* Warm paper sand neutrals paired with Burgundy */
     --gray-1: #FDFAF5;   /* Canvas paper background (Cream 50) */
