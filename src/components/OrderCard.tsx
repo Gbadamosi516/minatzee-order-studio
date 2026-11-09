@@ -138,7 +138,7 @@ export const OrderCard: React.FC<OrderCardProps> = ({
               e.stopPropagation();
               setMenuOpen(!menuOpen);
             }}
-            className="w-7 h-7 rounded-md hover:bg-[#FFB7B1]/30 text-[#9A3442] flex items-center justify-center transition-colors cursor-pointer border border-transparent hover:border-[#9A3442]/40"
+            className="w-7 h-7 rounded-md hover:bg-[#FDF1EF] text-[#9A3442] flex items-center justify-center transition-colors cursor-pointer border border-transparent hover:border-[#9A3442]/40"
             aria-label="Order actions"
           >
             <MoreVertical className="w-4 h-4 stroke-[2.2]" />
@@ -220,7 +220,7 @@ export const OrderCard: React.FC<OrderCardProps> = ({
           {order.productCategory}
         </span>
         {order.size && (
-          <span className="bg-[#F3C6CB] text-[#6B1E2B] px-2 py-0.5 rounded-full border border-[#9A3442]/60">
+          <span className="bg-[#FDF1EF] text-[#9A3442] px-2 py-0.5 rounded-full border border-[#9A3442]">
             SIZE {order.size}
           </span>
         )}
@@ -264,7 +264,7 @@ export const OrderCard: React.FC<OrderCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] font-spacemono font-bold text-[10px] tracking-wider uppercase transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
+            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] font-spacemono font-bold text-[10px] tracking-wider uppercase transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
             title={`Chat with ${order.customerName} on WhatsApp`}
           >
             <MessageCircle className="w-3 h-3 text-[#9A3442]" />
@@ -302,7 +302,7 @@ export const OrderCard: React.FC<OrderCardProps> = ({
               setStageDropdownOpen(!stageDropdownOpen);
             }}
             type="button"
-            className="w-7 h-7 rounded-full bg-[#FDFAF5] hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[1px_1px_0_#9A3442]"
+            className="w-7 h-7 rounded-full bg-[#FDFAF5] hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[1px_1px_0_#9A3442]"
             title="Jump directly to any stage"
             aria-label="Change stage"
           >

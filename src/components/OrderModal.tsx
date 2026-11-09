@@ -181,7 +181,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
+            className="w-8 h-8 rounded-full hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-4 h-4 stroke-[2.2]" />
@@ -203,7 +203,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   href={quickWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[10px] font-spacemono font-bold uppercase tracking-wider text-[#9A3442] bg-[#FFC9C2] hover:bg-[#FFB7B1] px-2.5 py-1 rounded-full border-2 border-[#9A3442] shadow-[1px_1px_0_#9A3442] transition-all"
+                  className="inline-flex items-center gap-1 text-[10px] font-spacemono font-bold uppercase tracking-wider text-[#9A3442] bg-[#FDF1EF] hover:bg-[#FBDDD8] px-2.5 py-1 rounded-full border border-[#9A3442] shadow-[1px_1px_0_#9A3442] transition-all"
                 >
                   <MessageCircle className="w-3 h-3 text-[#9A3442]" />
                   <span>WhatsApp</span>
@@ -228,7 +228,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   className={`w-full px-3.5 py-2.5 rounded-[8px] border-2 text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all ${
                     errors.customerName
                       ? 'border-[#9A3442] bg-[#FDF1EF]'
-                      : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2]'
+                      : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8]'
                   }`}
                 />
                 {errors.customerName && (
@@ -253,7 +253,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                     if (!whatsappContact) setWhatsappContact(e.target.value);
                   }}
                   placeholder="e.g. 0803 123 4567"
-                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all"
                 />
               </div>
 
@@ -268,7 +268,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   value={whatsappContact}
                   onChange={(e) => setWhatsappContact(e.target.value)}
                   placeholder="e.g. 0803 123 4567"
-                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all"
                 />
               </div>
             </div>
@@ -296,7 +296,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 className={`w-full px-3.5 py-2.5 rounded-[8px] border-2 text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all resize-none ${
                   errors.productDescription
                     ? 'border-[#9A3442] bg-[#FDF1EF]'
-                    : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2]'
+                    : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8]'
                 }`}
               />
               {errors.productDescription && (
@@ -316,7 +316,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 <select
                   value={productCategory}
                   onChange={(e) => setProductCategory(e.target.value as ProductCategory)}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
                 >
                   <option value="Women's Innerwear">Women&apos;s Innerwear</option>
                   <option value="Children's Innerwear">Children&apos;s Innerwear</option>
@@ -335,7 +335,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   value={size}
                   onChange={(e) => setSize(e.target.value)}
                   placeholder="e.g. 36B, M, 6-8 Yrs"
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-instrumentsans text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-instrumentsans text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none"
                 />
               </div>
 
@@ -350,7 +350,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   min="1"
                   value={quantity}
                   onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value, 10) || 1))}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-spacemono font-bold text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-spacemono font-bold text-[#2A1B1E] outline-none"
                 />
               </div>
             </div>
@@ -371,7 +371,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 className={`w-full px-3.5 py-2.5 rounded-[8px] border-2 text-xs sm:text-sm font-spacemono font-bold text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none transition-all ${
                   errors.orderAmount
                     ? 'border-[#9A3442] bg-[#FDF1EF]'
-                    : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2]'
+                    : 'border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8]'
                 }`}
               />
               {errors.orderAmount && (
@@ -399,7 +399,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 <select
                   value={paymentStatus}
                   onChange={(e) => setPaymentStatus(e.target.value as PaymentStatus)}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
                 >
                   <option value="Awaiting Payment">Awaiting Payment</option>
                   <option value="Part Payment">Part Payment</option>
@@ -420,20 +420,26 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   value={amountPaid}
                   onChange={(e) => handleAmountPaidChange(e.target.value)}
                   placeholder="0"
-                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs sm:text-sm font-spacemono font-bold text-[#2A1B1E] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs sm:text-sm font-spacemono font-bold text-[#2A1B1E] outline-none"
                 />
               </div>
             </div>
 
-            {/* Balance Due Display Box (.mz-card--blush) */}
-            <div className="p-3.5 rounded-[14px] bg-[#FFC9C2] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] flex items-center justify-between">
+            {/* Balance Due Display Box (Radix Status Scale: Amber for outstanding, Grass for paid) */}
+            <div className={`p-3.5 rounded-[14px] border-2 shadow-[2px_2px_0] flex items-center justify-between ${
+              balanceDue > 0
+                ? 'bg-[#F8E8DE] border-[#9C4A22] shadow-[#9C4A22] text-[#6E3212]'
+                : 'bg-[#EAF1EC] border-[#2F6B4F] shadow-[#2F6B4F] text-[#20503A]'
+            }`}>
               <div>
-                <span className="text-[11px] font-spacemono font-bold uppercase tracking-wider text-[#3D0F17] block">
-                  Balance Due
+                <span className="text-[11px] font-spacemono font-bold uppercase tracking-wider block">
+                  {balanceDue > 0 ? 'Balance Due' : 'Balance Settled'}
                 </span>
-                <span className="text-[11px] text-[#6B1F2C] font-instrumentsans">Calculated automatically</span>
+                <span className="text-[11px] font-instrumentsans opacity-85">
+                  {balanceDue > 0 ? 'Outstanding customer balance' : 'Order fully paid ✓'}
+                </span>
               </div>
-              <div className="font-spacemono font-bold text-base sm:text-lg text-[#3D0F17] tabular-nums">
+              <div className="font-spacemono font-bold text-base sm:text-lg tabular-nums">
                 {formatNaira(balanceDue)}
               </div>
             </div>
@@ -455,7 +461,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 <select
                   value={orderStage}
                   onChange={(e) => setOrderStage(e.target.value as OrderStage)}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-instrumentsans text-[#2A1B1E] outline-none"
                 >
                   <option value="New Chats">New Chats</option>
                   <option value="Awaiting Payment">Awaiting Payment</option>
@@ -474,7 +480,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   type="date"
                   value={orderDate}
                   onChange={(e) => setOrderDate(e.target.value)}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-spacemono text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-spacemono text-[#2A1B1E] outline-none"
                 />
               </div>
 
@@ -487,7 +493,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   type="date"
                   value={dispatchDate}
                   onChange={(e) => setDispatchDate(e.target.value)}
-                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs font-spacemono text-[#2A1B1E] outline-none"
+                  className="w-full px-3 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs font-spacemono text-[#2A1B1E] outline-none"
                 />
               </div>
             </div>
@@ -502,7 +508,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Delivery instructions, customer preferences, packaging requests..."
-                className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none resize-none font-instrumentsans"
+                className="w-full px-3.5 py-2.5 rounded-[8px] border-2 border-[#D98A96] bg-white hover:border-[#B04756] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-xs sm:text-sm text-[#2A1B1E] placeholder:text-[#CFBFA9] outline-none resize-none font-instrumentsans"
               />
             </div>
           </div>
@@ -530,7 +536,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
+                className="px-4 py-2 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
               >
                 Cancel
               </button>

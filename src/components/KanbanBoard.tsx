@@ -172,11 +172,11 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({
                   key={stage}
                   onClick={() => scrollToStage(stage)}
                   type="button"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-spacemono font-bold uppercase tracking-wider bg-[#FDFAF5] hover:bg-[#FFC9C2] text-[#9A3442] border border-[#9A3442]/50 hover:border-[#9A3442] transition-all cursor-pointer whitespace-nowrap active:scale-95"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-spacemono font-bold uppercase tracking-wider bg-[#FDFAF5] hover:bg-[#FDF1EF] text-[#9A3442] border border-[#9A3442]/50 hover:border-[#9A3442] transition-all cursor-pointer whitespace-nowrap active:scale-95"
                   title={`Scroll directly to ${stage}`}
                 >
                   <span>{stage}</span>
-                  <span className="px-1 py-0.2 bg-[#FFB7B1] text-[#3D0F17] rounded-full text-[10px]">
+                  <span className="px-1.5 py-0.2 bg-[#FDF1EF] text-[#9A3442] border border-[#9A3442] rounded-full text-[10px]">
                     {count}
                   </span>
                 </button>
@@ -191,7 +191,7 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({
               <button
                 onClick={handleScrollLeft}
                 type="button"
-                className="w-8 h-8 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
+                className="w-8 h-8 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
                 title="Scroll stages left"
                 aria-label="Scroll left"
               >
@@ -200,7 +200,7 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({
               <button
                 onClick={handleScrollRight}
                 type="button"
-                className="w-8 h-8 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
+                className="w-8 h-8 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
                 title="Scroll stages right"
                 aria-label="Scroll right"
               >

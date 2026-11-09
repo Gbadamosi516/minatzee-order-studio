@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
               className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-spacemono font-bold tracking-wider uppercase transition-all cursor-pointer border-2 border-[#9A3442] shadow-[3px_3px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 ${
                 googleUser
                   ? 'bg-[#EAF1EC] text-[#2F6B4F] border-[#2F6B4F] shadow-[3px_3px_0_#2F6B4F]'
-                  : 'bg-white text-[#9A3442] hover:bg-[#F3C6CB]'
+                  : 'bg-white text-[#9A3442] hover:bg-[#FDF1EF]'
               } disabled:opacity-60`}
               title={googleUser ? `Google account: ${googleUser.email}` : 'Connect Google Sheets for Cloud Sync'}
               aria-label="Google Sheets Sync"
@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onOpenSettings}
               type="button"
-              className="w-10 h-10 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[3px_3px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
+              className="w-10 h-10 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[3px_3px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
               title="Studio Settings & Data Backup"
               aria-label="Open Settings"
             >
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({
               className={`w-9 h-9 rounded-full flex items-center justify-center transition-all cursor-pointer border-2 shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0 ${
                 googleUser
                   ? 'bg-[#EAF1EC] text-[#2F6B4F] border-[#2F6B4F]'
-                  : 'bg-white text-[#9A3442] border-[#9A3442] hover:bg-[#F3C6CB]'
+                  : 'bg-white text-[#9A3442] border-[#9A3442] hover:bg-[#FDF1EF]'
               }`}
               title={googleUser ? `Google account: ${googleUser.email}` : 'Google Sheets'}
               aria-label="Google Sheets Sync"
@@ -142,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onOpenSettings}
               type="button"
-              className="w-9 h-9 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
+              className="w-9 h-9 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] active:translate-x-0 active:translate-y-0"
               title="Studio Settings & Data Backup"
               aria-label="Open Settings"
             >

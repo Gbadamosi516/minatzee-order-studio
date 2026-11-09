@@ -372,7 +372,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFAF5] text-[#2A1B1E] flex flex-col selection:bg-[#FFB7B1] selection:text-[#521722] font-instrumentsans">
+    <div className="min-h-screen bg-[#FDFAF5] text-[#2A1B1E] flex flex-col selection:bg-[#FBDDD8] selection:text-[#3B0B14] font-instrumentsans">
       
       {/* 1. Header */}
       <Header
@@ -518,7 +518,7 @@ export default function App() {
       {/* Floating Success Celebration Toast */}
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 bg-[#9A3442] text-white px-5 py-3 rounded-[14px] shadow-[4px_4px_0_#3D0F17] flex items-center gap-2.5 animate-in slide-in-from-bottom-3 duration-200 border-2 border-[#9A3442] font-instrumentsans text-xs sm:text-sm">
-          <CheckCircle2 className="w-4 h-4 text-[#FFB7B1] shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
           <span className="font-semibold tracking-tight">
             {toastMessage}
           </span>

@@ -78,7 +78,7 @@ export const GoogleSheetsModal: React.FC<GoogleSheetsModalProps> = ({
           <button
             onClick={onClose}
             type="button"
-            className="w-8 h-8 rounded-full hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
+            className="w-8 h-8 rounded-full hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
             aria-label="Close"
           >
             <X className="w-4 h-4 stroke-[2.2]" />
@@ -180,7 +180,7 @@ export const GoogleSheetsModal: React.FC<GoogleSheetsModalProps> = ({
                   <button
                     onClick={onGoogleSignOut}
                     type="button"
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#F3C6CB] text-[#9A3442] text-[10px] font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[1px_1px_0_#9A3442]"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FDF1EF] text-[#9A3442] text-[10px] font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[1px_1px_0_#9A3442]"
                   >
                     <LogOut className="w-3 h-3" />
                     <span>Disconnect</span>
@@ -284,7 +284,7 @@ export const GoogleSheetsModal: React.FC<GoogleSheetsModalProps> = ({
           <button
             onClick={onClose}
             type="button"
-            className="px-4 py-1.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FFC9C2] text-[#9A3442] font-spacemono font-bold uppercase text-[11px] transition-all cursor-pointer"
+            className="px-4 py-1.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FDF1EF] text-[#9A3442] font-spacemono font-bold uppercase text-[11px] transition-all cursor-pointer"
           >
             Close
           </button>

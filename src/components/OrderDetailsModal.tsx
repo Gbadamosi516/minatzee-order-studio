@@ -91,7 +91,7 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
+            className="w-8 h-8 rounded-full hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
             aria-label="Close"
           >
             <X className="w-4 h-4 stroke-[2.2]" />
@@ -131,7 +131,7 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
                   <>
                     <a
                       href={`tel:${order.phoneNumber}`}
-                      className="w-8 h-8 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all shadow-[2px_2px_0_#9A3442]"
+                      className="w-8 h-8 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all shadow-[2px_2px_0_#9A3442]"
                       title="Call customer"
                     >
                       <Phone className="w-3.5 h-3.5" />
@@ -140,7 +140,7 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
                       title="Open WhatsApp chat"
                     >
                       <MessageCircle className="w-3.5 h-3.5 text-[#9A3442]" />
@@ -166,7 +166,7 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
               {order.size && (
                 <>
                   <span className="text-[#9A3442]/40">·</span>
-                  <span className="bg-[#F3C6CB] text-[#6B1E2B] px-2 py-0.5 rounded-full border border-[#9A3442]/50">Size: {order.size}</span>
+                  <span className="bg-[#FDF1EF] text-[#9A3442] px-2 py-0.5 rounded-full border border-[#9A3442]">Size: {order.size}</span>
                 </>
               )}
               <span className="text-[#9A3442]/40">·</span>
@@ -174,24 +174,30 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
             </div>
           </div>
 
-          {/* Financial Breakdown (Soft Rose supporting palette) */}
-          <div className="p-3.5 rounded-[12px] bg-[#FBE9EB] border-2 border-[#E9DDD9] space-y-2">
+          {/* Financial Breakdown (Radix UI Surface & Status Contrast) */}
+          <div className="p-3.5 rounded-[12px] bg-white border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] space-y-2.5">
             <div className="flex justify-between items-center text-[#2E2425]/90 font-instrumentsans">
-              <span className="font-medium">Total Order Amount:</span>
+              <span className="font-semibold text-xs">Total Order Amount:</span>
               <span className="font-spacemono font-bold text-sm text-[#822936] tabular-nums">
                 {formatNaira(order.orderAmount)}
               </span>
             </div>
             <div className="flex justify-between items-center text-[#2E2425]/90 font-instrumentsans">
-              <span className="font-medium">Amount Paid:</span>
+              <span className="font-medium text-xs text-[#5C4649]">Amount Paid:</span>
               <span className="font-spacemono font-bold text-sm text-[#2E2425] tabular-nums">
                 {formatNaira(order.amountPaid)}
               </span>
             </div>
-            <div className="flex justify-between items-center pt-2 border-t-2 border-[#E9DDD9] text-[#2E2425] font-medium font-instrumentsans">
-              <span className="font-bold text-[#9A3442]">Balance Due:</span>
-              <span className="font-spacemono font-bold text-base text-[#9C4A22] tabular-nums">
-                {formatNaira(order.balanceDue)}
+            <div className={`flex justify-between items-center pt-2.5 border-t-2 border-[#E9DDD9] font-instrumentsans p-2 rounded-[8px] ${
+              order.balanceDue > 0
+                ? 'bg-[#F8E8DE] border-[#9C4A22] text-[#9C4A22]'
+                : 'bg-[#EAF1EC] border-[#2F6B4F] text-[#2F6B4F]'
+            }`}>
+              <span className="font-bold text-xs uppercase tracking-wider font-spacemono">
+                {order.balanceDue > 0 ? 'Balance Due:' : 'Status:'}
+              </span>
+              <span className="font-spacemono font-bold text-base tabular-nums">
+                {order.balanceDue > 0 ? formatNaira(order.balanceDue) : 'PAID IN FULL ✓'}
               </span>
             </div>
           </div>
@@ -238,7 +244,7 @@ export const OrderDetailsModal: React.FC<OrderDetailsModalProps> = ({
               onClose();
               onEdit(order);
             }}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-[#F3C6CB] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
           >
             <Edit3 className="w-3.5 h-3.5 text-[#9A3442]" />
             <span>Edit Order</span>

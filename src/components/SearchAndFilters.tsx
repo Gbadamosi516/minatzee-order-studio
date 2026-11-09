@@ -47,7 +47,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
             value={filters.searchQuery}
             onChange={(e) => onFilterChange({ searchQuery: e.target.value })}
             placeholder="Search customer, phone, order details..."
-            className="w-full pl-10 pr-9 py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] rounded-[8px] text-xs sm:text-sm text-[#2A1B1E] font-instrumentsans placeholder:text-[#CFBFA9] transition-all outline-none"
+            className="w-full pl-10 pr-9 py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] rounded-[8px] text-xs sm:text-sm text-[#2A1B1E] font-instrumentsans placeholder:text-[#CFBFA9] transition-all outline-none"
           />
           {filters.searchQuery && (
             <button
@@ -67,7 +67,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
             <select
               value={filters.sortBy}
               onChange={(e) => onFilterChange({ sortBy: e.target.value as SortOption })}
-              className="pl-8 pr-7 py-2 sm:py-2.5 w-full bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer appearance-none transition-all"
+              className="pl-8 pr-7 py-2 sm:py-2.5 w-full bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer appearance-none transition-all"
             >
               <option value="newest">Sort: Newest</option>
               <option value="oldest">Sort: Oldest</option>
@@ -80,7 +80,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
           <select
             value={filters.paymentStatus}
             onChange={(e) => onFilterChange({ paymentStatus: e.target.value as PaymentStatus | 'all' })}
-            className="w-full sm:w-auto px-3 py-2 sm:py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer transition-all"
+            className="w-full sm:w-auto px-3 py-2 sm:py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer transition-all"
           >
             <option value="all">Payment: All</option>
             <option value="Paid">Payment: Paid</option>
@@ -92,7 +92,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
           <select
             value={filters.dateRange}
             onChange={(e) => onFilterChange({ dateRange: e.target.value as DateFilterOption })}
-            className="w-full sm:w-auto px-3 py-2 sm:py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer transition-all"
+            className="w-full sm:w-auto px-3 py-2 sm:py-2.5 bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] rounded-[8px] text-xs font-instrumentsans text-[#2E2425] outline-none cursor-pointer transition-all"
           >
             <option value="all_time">Date: All</option>
             <option value="today">Date: Today</option>
@@ -106,7 +106,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
             <button
               onClick={onClearFilters}
               type="button"
-              className="col-span-2 sm:col-span-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-[#FFC9C2] hover:bg-[#FFB7B1] border-2 border-[#9A3442] text-[#3D0F17] text-xs font-spacemono font-bold tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
+              className="col-span-2 sm:col-span-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-[#FDF1EF] hover:bg-[#FBDDD8] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
             >
               <X className="w-3.5 h-3.5" />
               <span>Clear</span>
@@ -127,7 +127,7 @@ export const SearchAndFilters: React.FC<SearchAndFiltersProps> = ({
                 className={`px-3 py-1.5 rounded-full text-xs font-spacemono uppercase tracking-wider font-bold whitespace-nowrap transition-all cursor-pointer border-2 ${
                   isActive
                     ? 'bg-[#9A3442] text-white border-[#9A3442] shadow-[2px_2px_0_#9A3442]'
-                    : 'bg-[#FAF6F2] hover:bg-[#F3C6CB] text-[#9A3442] border-[#9A3442]/40 hover:border-[#9A3442]'
+                    : 'bg-[#FAF6F2] hover:bg-[#FDF1EF] text-[#9A3442] border-[#9A3442]/40 hover:border-[#9A3442]'
                 }`}
               >
                 {st.label}

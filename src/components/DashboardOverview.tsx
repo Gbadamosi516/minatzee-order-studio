@@ -39,16 +39,16 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ orders }) 
       */}
       <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4.5">
         
-        {/* CARD 1: TOTAL ORDERS TODAY */}
-        <div className="bg-[#FFB7B1] rounded-[14px] p-3.5 sm:p-5 border-2 border-[#9A3442] shadow-[4px_4px_0_#9A3442] sm:shadow-[6px_6px_0_#9A3442] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative">
+        {/* CARD 1: TOTAL ORDERS TODAY (Radix Accent Scale: Burgundy #9A3442) */}
+        <div className="bg-white rounded-[14px] p-4 sm:p-5 border-2 border-[#9A3442] shadow-[4px_4px_0_#9A3442] sm:shadow-[5px_5px_0_#9A3442] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative">
           <div>
             <div className="flex items-center justify-between mb-2.5 sm:mb-3">
               <span className="font-spacemono text-[11px] sm:text-xs font-bold text-[#9A3442] tracking-[0.14em] uppercase flex items-center gap-1.5 sm:gap-2">
                 <span className="w-2 h-2 bg-[#9A3442] rotate-45 shrink-0" />
                 Orders Today
               </span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-[#9A3442] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] flex items-center justify-center shrink-0">
-                <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+              <div className="w-8 h-8 rounded-full bg-[#FDF1EF] text-[#9A3442] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] flex items-center justify-center shrink-0">
+                <ShoppingBag className="w-4 h-4 stroke-[2.2]" />
               </div>
             </div>
 
@@ -56,14 +56,14 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ orders }) 
               <div className="font-spacemono font-bold text-2xl sm:text-3xl text-[#9A3442] tabular-nums tracking-tight">
                 {totalOrdersTodayCount}
               </div>
-              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#9A3442] bg-white px-2.5 py-0.5 sm:py-1 rounded-full border-2 border-[#9A3442] shadow-[1px_1px_0_#9A3442] sm:shadow-[2px_2px_0_#9A3442] tabular-nums">
+              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#9A3442] bg-[#FDF1EF] px-2.5 py-1 rounded-full border border-[#9A3442] shadow-[1px_1px_0_#9A3442] tabular-nums">
                 {orders.length} TOTAL LOGGED
               </span>
             </div>
           </div>
 
-          <div className="mt-3 pt-2.5 border-t-2 border-[#9A3442]/20 flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
-            <span className="font-medium text-[11px] sm:text-xs">
+          <div className="mt-3.5 pt-2.5 border-t-2 border-[#E9DDD9] flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
+            <span className="font-medium text-[11px] sm:text-xs text-[#5C4649]">
               {totalOrdersTodayCount > 0 
                 ? `${totalOrdersTodayCount} order${totalOrdersTodayCount > 1 ? 's' : ''} logged today`
                 : 'No orders logged today yet'}
@@ -76,63 +76,63 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ orders }) 
           </div>
         </div>
 
-        {/* CARD 2: TOTAL PAID */}
-        <div className="bg-[#FFB7B1] rounded-[14px] p-3.5 sm:p-5 border-2 border-[#9A3442] shadow-[4px_4px_0_#9A3442] sm:shadow-[6px_6px_0_#9A3442] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative">
+        {/* CARD 2: TOTAL PAID (Radix Grass / Success Scale: #2F6B4F on #EAF1EC) */}
+        <div className="bg-white rounded-[14px] p-4 sm:p-5 border-2 border-[#2F6B4F] shadow-[4px_4px_0_#2F6B4F] sm:shadow-[5px_5px_0_#2F6B4F] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative">
           <div>
             <div className="flex items-center justify-between mb-2.5 sm:mb-3">
-              <span className="font-spacemono text-[11px] sm:text-xs font-bold text-[#9A3442] tracking-[0.14em] uppercase flex items-center gap-1.5 sm:gap-2">
-                <span className="w-2 h-2 bg-[#9A3442] rotate-45 shrink-0" />
+              <span className="font-spacemono text-[11px] sm:text-xs font-bold text-[#2F6B4F] tracking-[0.14em] uppercase flex items-center gap-1.5 sm:gap-2">
+                <span className="w-2 h-2 bg-[#2F6B4F] rotate-45 shrink-0" />
                 Total Paid
               </span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-[#9A3442] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] flex items-center justify-center shrink-0">
-                <Wallet className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+              <div className="w-8 h-8 rounded-full bg-[#EAF1EC] text-[#2F6B4F] border-2 border-[#2F6B4F] shadow-[2px_2px_0_#2F6B4F] flex items-center justify-center shrink-0">
+                <Wallet className="w-4 h-4 stroke-[2.2]" />
               </div>
             </div>
 
             <div className="flex items-baseline justify-between gap-2 flex-wrap">
-              <div className="font-spacemono font-bold text-2xl sm:text-3xl text-[#9A3442] tabular-nums tracking-tight">
+              <div className="font-spacemono font-bold text-2xl sm:text-3xl text-[#2F6B4F] tabular-nums tracking-tight">
                 {formatNaira(totalPaidAmount)}
               </div>
-              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#9A3442] bg-white px-2.5 py-0.5 sm:py-1 rounded-full border-2 border-[#9A3442] shadow-[1px_1px_0_#9A3442] sm:shadow-[2px_2px_0_#9A3442]">
+              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#2F6B4F] bg-[#EAF1EC] px-2.5 py-1 rounded-full border border-[#2F6B4F] shadow-[1px_1px_0_#2F6B4F]">
                 CONFIRMED
               </span>
             </div>
           </div>
 
-          <div className="mt-3 pt-2.5 border-t-2 border-[#9A3442]/20 flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
-            <span className="font-medium text-[11px] sm:text-xs">Collected boutique revenue</span>
-            <span className="font-spacemono font-bold text-[#9A3442] tabular-nums">
+          <div className="mt-3.5 pt-2.5 border-t-2 border-[#E9DDD9] flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
+            <span className="font-medium text-[11px] sm:text-xs text-[#5C4649]">Collected boutique revenue</span>
+            <span className="font-spacemono font-bold text-[#2F6B4F] tabular-nums">
               {paidOrdersCount} orders
             </span>
           </div>
         </div>
 
-        {/* CARD 3: TOTAL AWAITING PAYMENT (spans 2 columns on mobile/tablet) */}
-        <div className="bg-[#FFB7B1] rounded-[14px] p-3.5 sm:p-5 border-2 border-[#9A3442] shadow-[4px_4px_0_#9A3442] sm:shadow-[6px_6px_0_#9A3442] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative min-[480px]:col-span-2 lg:col-span-1">
+        {/* CARD 3: TOTAL AWAITING PAYMENT (Radix Amber / Warning Scale: #9C4A22 on #F8E8DE) */}
+        <div className="bg-white rounded-[14px] p-4 sm:p-5 border-2 border-[#9C4A22] shadow-[4px_4px_0_#9C4A22] sm:shadow-[5px_5px_0_#9C4A22] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 duration-150 flex flex-col justify-between relative min-[480px]:col-span-2 lg:col-span-1">
           <div>
             <div className="flex items-center justify-between mb-2.5 sm:mb-3">
-              <span className="font-spacemono text-[11px] sm:text-xs font-bold text-[#9A3442] tracking-[0.14em] uppercase flex items-center gap-1.5 sm:gap-2">
-                <span className="w-2 h-2 bg-[#9A3442] rotate-45 shrink-0" />
+              <span className="font-spacemono text-[11px] sm:text-xs font-bold text-[#9C4A22] tracking-[0.14em] uppercase flex items-center gap-1.5 sm:gap-2">
+                <span className="w-2 h-2 bg-[#9C4A22] rotate-45 shrink-0" />
                 Awaiting Payment
               </span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-[#9A3442] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442] flex items-center justify-center shrink-0">
-                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
+              <div className="w-8 h-8 rounded-full bg-[#F8E8DE] text-[#9C4A22] border-2 border-[#9C4A22] shadow-[2px_2px_0_#9C4A22] flex items-center justify-center shrink-0">
+                <Clock className="w-4 h-4 stroke-[2.2]" />
               </div>
             </div>
 
             <div className="flex items-baseline justify-between gap-2 flex-wrap">
-              <div className="font-spacemono font-bold text-2xl sm:text-3xl text-[#9A3442] tabular-nums tracking-tight">
+              <div className="font-spacemono font-bold text-2xl sm:text-3xl text-[#9C4A22] tabular-nums tracking-tight">
                 {formatNaira(awaitingPaymentAmount)}
               </div>
-              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#9A3442] bg-white px-2.5 py-0.5 sm:py-1 rounded-full border-2 border-[#9A3442] shadow-[1px_1px_0_#9A3442] sm:shadow-[2px_2px_0_#9A3442]">
+              <span className="font-spacemono font-bold text-[10px] uppercase tracking-wider text-[#9C4A22] bg-[#F8E8DE] px-2.5 py-1 rounded-full border border-[#9C4A22] shadow-[1px_1px_0_#9C4A22]">
                 OUTSTANDING
               </span>
             </div>
           </div>
 
-          <div className="mt-3 pt-2.5 border-t-2 border-[#9A3442]/20 flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
-            <span className="font-medium text-[11px] sm:text-xs">Pending balance due</span>
-            <span className="font-spacemono font-bold text-[#9A3442] tabular-nums">
+          <div className="mt-3.5 pt-2.5 border-t-2 border-[#E9DDD9] flex items-center justify-between text-xs font-instrumentsans text-[#2E2425]">
+            <span className="font-medium text-[11px] sm:text-xs text-[#5C4649]">Pending balance due</span>
+            <span className="font-spacemono font-bold text-[#9C4A22] tabular-nums">
               {awaitingOrdersCount} pending
             </span>
           </div>

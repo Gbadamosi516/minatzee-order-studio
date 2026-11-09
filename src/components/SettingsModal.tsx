@@ -182,7 +182,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
+            className="w-8 h-8 rounded-full hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] text-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
             aria-label="Close"
           >
             <X className="w-4 h-4 stroke-[2.2]" />
@@ -217,7 +217,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="text"
                   disabled
                   value={settings.businessName}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FFB7B1]/15 border border-[#FFB7B1]/60 text-[#1A1A1A] font-manrope font-bold cursor-not-allowed"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] bg-[#FAF6F2] border-2 border-[#E9DDD9] text-[#6B5A5D] font-instrumentsans font-bold cursor-not-allowed text-xs sm:text-sm"
                 />
               </div>
 
@@ -229,7 +229,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="text"
                   disabled
                   value={settings.businessRegNumber}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FFB7B1]/15 border border-[#FFB7B1]/60 text-[#1A1A1A] font-mono font-medium cursor-not-allowed"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] bg-[#FAF6F2] border-2 border-[#E9DDD9] text-[#6B5A5D] font-spacemono font-medium cursor-not-allowed text-xs sm:text-sm"
                 />
               </div>
 
@@ -241,7 +241,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="text"
                   value={tagline}
                   onChange={(e) => setTagline(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#FFB7B1] focus:border-[#9A3442] text-[#1A1A1A] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-[#2E2425] font-instrumentsans text-xs sm:text-sm outline-none transition-all"
                 />
               </div>
 
@@ -253,7 +253,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="text"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-[8px] bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FFC9C2] text-[#2E2425] font-instrumentsans text-xs sm:text-sm outline-none transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-[8px] bg-white border-2 border-[#D98A96] focus:border-[#9A3442] focus:ring-3 focus:ring-[#FBDDD8] text-[#2E2425] font-instrumentsans text-xs sm:text-sm outline-none transition-all"
                 />
               </div>
             </div>
@@ -297,7 +297,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="button"
                   onClick={onGoogleSignIn}
                   disabled={isSyncingSheets}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#F3C6CB] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider shadow-[3px_3px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 cursor-pointer transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FDF1EF] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider shadow-[3px_3px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 cursor-pointer transition-all"
                 >
                   <svg className="w-4 h-4 shrink-0 text-[#9A3442]" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6v-2h3v2zm0-4H6v-2h3v2zm0-4H6V7h3v2zm4 8h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3V7h3v2zm5 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V7h4v2z" />
@@ -334,7 +334,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   <button
                     type="button"
                     onClick={onGoogleSignOut}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#F3C6CB] text-[#9A3442] text-[11px] font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 shrink-0"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FDF1EF] text-[#9A3442] text-[11px] font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 shrink-0"
                     title="Disconnect Google Account"
                   >
                     <LogOut className="w-3.5 h-3.5" />
@@ -365,7 +365,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                       href={spreadsheetUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#F3C6CB] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border-2 border-[#9A3442] bg-white hover:bg-[#FDF1EF] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
                       title="Open spreadsheet in Google Sheets"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -406,7 +406,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <button
                   type="button"
                   onClick={handleExport}
-                  className="w-full py-2 px-3 rounded-full bg-white hover:bg-[#F3C6CB] text-[#9A3442] border-2 border-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider text-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                  className="w-full py-2 px-3 rounded-full bg-white hover:bg-[#FDF1EF] text-[#9A3442] border-2 border-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider text-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
                 >
                   Download Backup File
                 </button>
@@ -433,7 +433,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full py-2 px-3 rounded-full bg-white hover:bg-[#F3C6CB] text-[#9A3442] border-2 border-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider text-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                  className="w-full py-2 px-3 rounded-full bg-white hover:bg-[#FDF1EF] text-[#9A3442] border-2 border-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider text-center transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
                 >
                   Choose Backup File
                 </button>
@@ -479,7 +479,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handlePromptLoadSamples}
-                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-white border-2 border-[#9A3442] hover:bg-[#F3C6CB] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-white border-2 border-[#9A3442] hover:bg-[#FDF1EF] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
                 <RotateCcw className="w-3.5 h-3.5 text-[#9A3442]" />
                 <span>Reload Sample Orders</span>
@@ -488,7 +488,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handlePromptClearAll}
-                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-[#FBE9EB] border-2 border-[#6B1E2B] text-[#6B1E2B] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#6B1E2B] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#6B1E2B] text-[#6B1E2B] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#6B1E2B] hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>Clear All Order Records</span>
@@ -503,7 +503,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+            className="px-5 py-2 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] font-spacemono font-bold text-xs uppercase tracking-wider cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
           >
             Close
           </button>

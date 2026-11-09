@@ -1,5 +1,65 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent-1: #FFF8F7;
+  --color-accent-2: #FDF1EF;
+  --color-accent-3: #FBDDD8;
+  --color-accent-4: #FFC9C2;
+  --color-accent-5: #FFB7B1;
+  --color-accent-6: #F79E97;
+  --color-accent-7: #D98A96;
+  --color-accent-8: #C66070;
+  --color-accent-9: #9A3442;
+  --color-accent-10: #822936;
+  --color-accent-11: #6B1F2C;
+  --color-accent-12: #3D0F17;
+
+  --color-gray-1: #FDFAF5;
+  --color-gray-2: #F8F2E8;
+  --color-gray-3: #FAF6F2;
+  --color-gray-4: #F0E6D8;
+  --color-gray-5: #E9DDD9;
+  --color-gray-6: #E2D5C2;
+  --color-gray-7: #CFBFA9;
+  --color-gray-8: #B5A48D;
+  --color-gray-9: #6B5A5D;
+  --color-gray-10: #5C4649;
+  --color-gray-11: #3A2A2D;
+  --color-gray-12: #2E2425;
+
+  --color-grass-1: #FBFCFA;
+  --color-grass-2: #F3F9F4;
+  --color-grass-3: #EAF1EC;
+  --color-grass-6: #C5DEC8;
+  --color-grass-7: #8FB796;
+  --color-grass-9: #2F6B4F;
+  --color-grass-11: #20503A;
+
+  --color-amber-1: #FEFDFB;
+  --color-amber-2: #FAF4EB;
+  --color-amber-3: #F8E8DE;
+  --color-amber-6: #ECCBB9;
+  --color-amber-7: #D89873;
+  --color-amber-9: #9C4A22;
+  --color-amber-11: #6E3212;
+
+  --color-gold-1: #FDFDFC;
+  --color-gold-2: #FAF7F0;
+  --color-gold-3: #F7EEDD;
+  --color-gold-6: #E4D7BB;
+  --color-gold-7: #C9B27F;
+  --color-gold-9: #8A5A1E;
+  --color-gold-11: #5D3D14;
+
+  --color-ruby-1: #FFF8F8;
+  --color-ruby-2: #FDF1F2;
+  --color-ruby-3: #FBE9EB;
+  --color-ruby-6: #F3C6CB;
+  --color-ruby-7: #D98A96;
+  --color-ruby-9: #6B1E2B;
+  --color-ruby-11: #4A141D;
+}
+
 @layer base {
   :root {
     /* =========================================================================

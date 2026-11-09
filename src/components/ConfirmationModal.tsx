@@ -31,7 +31,11 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start gap-3.5">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-[#FFC9C2] text-[#9A3442] border-2 border-[#9A3442] shadow-[2px_2px_0_#9A3442]">
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-2 shadow-[2px_2px_0_#9A3442] ${
+            isDestructive 
+              ? 'bg-[#FBE9EB] text-[#6B1E2B] border-[#6B1E2B]' 
+              : 'bg-[#FDF1EF] text-[#9A3442] border-[#9A3442]'
+          }`}>
             <AlertTriangle className="w-5 h-5 stroke-[2.2]" />
           </div>
           <div className="flex-1 min-w-0">
@@ -44,7 +48,7 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
           </div>
           <button
             onClick={onCancel}
-            className="w-7 h-7 rounded-full text-[#9A3442] hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] flex items-center justify-center cursor-pointer transition-all"
+            className="w-7 h-7 rounded-full text-[#9A3442] hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] flex items-center justify-center cursor-pointer transition-all"
           >
             <X className="w-4 h-4 stroke-[2.2]" />
           </button>
@@ -55,7 +59,7 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
+            className="px-4 py-2 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0"
           >
             {cancelLabel}
           </button>

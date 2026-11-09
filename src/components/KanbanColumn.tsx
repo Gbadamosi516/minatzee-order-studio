@@ -73,7 +73,7 @@ export const KanbanColumn: React.FC<KanbanColumnProps> = ({
       ref={setNodeRef}
       className={`flex flex-col w-[86vw] sm:w-[320px] max-w-[360px] shrink-0 bg-[#F8F2E8] rounded-[14px] border-2 transition-all duration-200 overflow-hidden shadow-[4px_4px_0_#9A3442] ${
         isOver
-          ? 'border-[#9A3442] ring-3 ring-[#FFC9C2] bg-[#FDF1EF]'
+          ? 'border-[#9A3442] ring-3 ring-[#FBDDD8] bg-[#FDF1EF]'
           : 'border-[#9A3442]/80 hover:border-[#9A3442]'
       }`}
     >
@@ -87,7 +87,7 @@ export const KanbanColumn: React.FC<KanbanColumnProps> = ({
             {stage}
           </h3>
 
-          <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-spacemono font-bold bg-[#FFC9C2] text-[#3D0F17] border-2 border-[#9A3442] tabular-nums shadow-[1px_1px_0_#9A3442]">
+          <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[11px] font-spacemono font-bold bg-[#FDF1EF] text-[#9A3442] border border-[#9A3442] tabular-nums shadow-[1px_1px_0_#9A3442]">
             {orders.length}
           </span>
         </div>
@@ -96,7 +96,7 @@ export const KanbanColumn: React.FC<KanbanColumnProps> = ({
         <button
           onClick={() => onAddOrderToStage(stage)}
           type="button"
-          className="w-7 h-7 rounded-full text-[#9A3442] hover:bg-[#FFC9C2] border-2 border-transparent hover:border-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
+          className="w-7 h-7 rounded-full text-[#9A3442] hover:bg-[#FDF1EF] border-2 border-transparent hover:border-[#9A3442] flex items-center justify-center transition-all cursor-pointer"
           title={`Add order directly to ${stage}`}
           aria-label={`Add order to ${stage}`}
         >
@@ -134,7 +134,7 @@ export const KanbanColumn: React.FC<KanbanColumnProps> = ({
             <button
               onClick={() => onAddOrderToStage(stage)}
               type="button"
-              className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-[#FFC9C2] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-[#FDF1EF] border-2 border-[#9A3442] text-[#9A3442] text-xs font-spacemono font-bold uppercase tracking-wider transition-all cursor-pointer shadow-[2px_2px_0_#9A3442] hover:-translate-x-0.5 hover:-translate-y-0.5"
             >
               <Plus className="w-3 h-3" />
               <span>Add Order</span>
